@@ -511,17 +511,6 @@ async function f() {
 
 ### 問題　async/awaitを用いて、クジラ週間天気APIから今日の日付と今日の天気を出力してください
 
-:::details ヒント
-:::message
-- スクリプトが実行されると、コールスタックにグローバルコンテクストから関数first()が実行される
-- WEB API（非同期APIのsetTimeout()）が実行される
-- setTimeoutの中にはconsole.logの後に、関数second()がある
-- グローバルコンテクストから関数first()がpopされる
-- グローバルコンテクストが空になる
-- 空になったことをイベントループが伝える
-- タスクキューに最初に入った順（console.logの後に、関数second()実行される
-:::
-
 :::details 解答例
 ```js
 const weatherFn = async () => {
